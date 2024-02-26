@@ -3,27 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
     <title>Document</title>
   </head>
   <body>
+    <div class="weather-app">
     <header>
-        <form>
-            <input type="search" placeholder="Enter a city..." required />
-            <input type="submit" value="Search"/>
+        <form class="search-form">
+            <input type="search" placeholder="Enter a city..." required class="search-form-input"/>
+            <input type="submit" value="Search"class="search-form-button"/>
         </form>
     </header>
     <main>
+        <div class="weather-app-data">
         <div>
-        <h1>
+        <h1 class="weather-app-city">
             Paris
           </h1>
-          <p>
+          <p class="weahter-app-details">
             Tuesday 14:39, scattered clouds
             <br/>
-            Humidity: 66%, wind: 23 km/hr 
+            Humidity: <strong>66%</strong>, wind: <strong>3.2 km/hr</strong>  
           </p>
         </div>
-        <div>🌨 12 C</div>
+        </div>
+        <div class="weather-app-temperature-container">
+            <div class="weather-app-icon">🌨</div>
+            <div class="weather-app-temperature"> 12 </div>
+            <div class="weather-app-unit"> C </div>
+                
+            </div>
 
           </main>
     </main>
@@ -38,5 +51,6 @@
       and the website is
       <a href="https://lyndsay-weather-app.netlify.app/">hosted on Netlify.</a>
     </footer>
+    </div>
   </body>
 </html>
