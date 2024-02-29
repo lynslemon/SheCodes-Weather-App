@@ -6,7 +6,6 @@ function refreshWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
-  let dateElement = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(temperature);
