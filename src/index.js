@@ -73,7 +73,7 @@ function displayForecast() {
   </div>
   `;
   });
-  let forecastELement = document.querySelector("#forecast");
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
 }
 
