@@ -54,7 +54,6 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 function displayForecast() {
-  let forecast = document.querySelector("#forecast");
   let days = ["Mon", "Tue", "Wed", "Thurs", "Fri"];
   let forecastHTML = "";
   days.forEach(function (day) {
@@ -73,5 +72,6 @@ function displayForecast() {
   </div>
   `;
   });
+  let forecast = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
 }
