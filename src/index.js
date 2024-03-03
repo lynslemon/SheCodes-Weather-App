@@ -34,7 +34,7 @@ function formatDate(date) {
   let day = days[date.getDay()];
 
   if (minutes < 10) {
-    minutes = 0`${minutes}`;
+    minutes = `0${minutes}`;
   }
   return `${day} ${hours}:${minutes}`;
 }
@@ -73,7 +73,8 @@ function displayForecast() {
   </div>
   `;
   });
-  let forecastElement = document.querySelector("#forecast");
+  let forecastELement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
 }
+
 searchCity("London");
