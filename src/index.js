@@ -71,9 +71,7 @@ function displayForecast(response) {
   let forecastHTML = "";
   response.data.days.forEach(function (day, index) {
     if (index < 5) {
-      forecastHTML =
-        forecastHTML +
-        `
+      forecastHTML = `${forecastHTML}
   <div class="weather-forecast-day">
   <div class="weather-forecast-date"> ${formatDay(day.time)} </div>
     <img src="${day.condition.icon_url}" class="weather-forecast-icon"/>
