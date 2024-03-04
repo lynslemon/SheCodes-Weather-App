@@ -16,7 +16,6 @@ function refreshWeather(response) {
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/hr`;
   timeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = ` <img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
-  displayForecast(response.data.city);
   getForecast(response.data.city);
 }
 
@@ -70,7 +69,7 @@ function getForecast(city) {
 
 function displayForecast(response) {
   let forecastHTML = "";
-  response.data.daily.forEach(function (day, index) {
+  response.data.days.forEach(function (day, index) {
     if (index < 5) {
       forecastHTML =
         forecastHTML +
