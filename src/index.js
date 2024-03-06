@@ -69,7 +69,7 @@ function getForecast(city) {
 
 function displayForecast(response) {
   let forecastHTML = "";
-  (function (day, index) {
+  response.data.daily.forEach(function (day, index) {
     if (index < 5) {
       forecastHTML = `${forecastHTML}
   <div class="weather-forecast-day">
@@ -90,5 +90,4 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
 }
-
 searchCity("London");
